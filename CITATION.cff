@@ -1,58 +1,14 @@
 cff-version: 1.2.0
-message: "If you use this dataset, please cite the original compilation as below. This repository is a CC BY 4.0 fork maintained by ShibaX1."
-type: dataset
-title: "India Geodata"
+message: "If you use this software, please cite it as below."
 authors:
-    name: "ShibaX1"
-    alias: "shibasisn2-lgtm"
-abstract: >-
-  Unified repository of India's openly-licensed geospatial data,
-  covering administrative boundaries, electoral maps, census geometries,
-  environmental zones, infrastructure networks, urban municipal data,
-  postal boundaries, police jurisdictions, and satellite remote sensing.
-url: "https://shibasisn2-lgtm.github.io/shibax1/"
-license: CC-BY-4.0
-date-released: "2026-03-07"
-keywords:
-  - India
-  - GIS
-  - geospatial
-  - administrative boundaries
-  - open data
-  - geodata
-  - mapping
-  - nighttime lights
-  - VIIRS
-  - remote sensing
-references:
-  - type: dataset
-    title: "Indian Admin Boundaries"
-    authors:
-      - name: "ramSeraph"
-    repository-code: "https://github.com/ramSeraph/indian_admin_boundaries"
-    license: CC0-1.0
-  - type: dataset
-    title: "DataMeet Maps"
-    authors:
-      - name: "DataMeet India community"
-    repository-code: "https://github.com/datameet/maps"
-    license: CC-BY-4.0
-  - type: dataset
-    title: "PMGSY GeoSadak"
-    authors:
-      - name: "Ministry of Rural Development"
-    repository-code: "https://github.com/datameet/pmgsy-geosadak"
-  - type: dataset
-    title: "India District Nightlights VIIRS"
-    authors:
-      - name: "ShibaX1"
-    license: MIT
-  - type: dataset
-    title: "SHRUG: Socioeconomic High-resolution Rural-Urban Geographic Platform for India"
-    authors:
-      - family-names: "Asher"
-        given-names: "Sam"
-      - family-names: "Novosad"
-        given-names: "Paul"
-    url: "https://www.devdatalab.org/shrug"
-    license: CC-BY-NC-SA-4.0
+- family-names: "YOUR_NAME_HERE"
+  given-names: "YOUR_NAME_HERE"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Lisa"
+  given-names: "Mona"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "shibax1"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2026-09-10
+url: "https://github.com/shibasisn2-lgtm/shibax1"
