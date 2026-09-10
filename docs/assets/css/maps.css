@@ -502,4 +502,4 @@ details.sub > input { margin-bottom: 6px; }
 }
 
 /* Keep the preview heading as a compact overlay instead of a flex column. */
-.stage-frame::before { position: absolute; top: 0; left: 0; right: 0; z-index: 3; height: auto; }
+.stage-frame::before { position: absolute; top: 0; left: 0; right: 0; z-index: 3; height: auto; } .page-maps .site-header a[href$="/maps/"], .page-maps .site-header a[href$="/about"], .page-maps .site-header a[href*="github.com/shibasisn2-lgtm/shibax1"] { display: none; }
