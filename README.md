@@ -3,7 +3,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Data validation](https://img.shields.io/badge/metadata-validated-brightgreen.svg)](.github/workflows/validate-metadata.yml)
 
-A unified, structured collection of India's openly-licensed geospatial data — administrative boundaries, electoral maps, census geometries, environmental zones, water resources, infrastructure networks, healthcare, education, urban municipal data, and more.
+A unified, structured collection of India's openly-licensed geospatial data — administrative boundaries, electoral maps, census geometries, environmental zones, water resources, infrastructure networks, and more.
 
 Browse and download at **[ShibaX1 India Geodata](https://shibasisn2-lgtm.github.io/shibax1)**
 
@@ -36,7 +36,7 @@ Browse and download at **[ShibaX1 India Geodata](https://shibasisn2-lgtm.github.
 | [Census](data/census/) | 2011 admin units, Historical districts (1941–2024) | Parquet, PMTiles, CSV | ~1.1 GB |
 | [Environment](data/environment/) | Forests, Coastal zones, Land use, Soil classification, Flood inventory, Flood atlas | Parquet, PMTiles, GeoJSON, JSON | ~8 GB |
 | [Water & Hydrology](data/water/) | Rivers, Streams, Lakes, Reservoirs, Tanks, Watersheds, Irrigation, Wetlands, Water Body Census, Urban Water, Natural Features | Parquet, PMTiles, GeoJSONL | ~18.5 GB |
-| [Infrastructure](data/infrastructure/) | Rural roads (PMGSY), National highways, SOI roads, NIC roads, ML roads, Urban roads, Railways, Inland waterways, Airports | Parquet, PMTiles, GeoJSONL, Shapefile, GeoJSON | ~20 GB |
+| [Infrastructure](data/infrastructure/) | Rural roads (PMGSY), National highways, SOI roads, NIC roads, ML roads, Urban roads, Railways, Inland waterways, Airports | Parquet, PMTiles, GeoJSONL, Shapefile | ~12 GB |
 | [Buildings](data/buildings/) | Urban building footprints (AMRUT/Bhuvan, GSDL, VEDAS) | Parquet, PMTiles, GeoJSONL.7z | ~9 GB |
 | [Energy](data/energy/) | Power plants (coal, diesel, hydro) | GeoJSON | ~128 KB |
 | [Healthcare](data/healthcare/) | Public health facilities (PHCs, CHCs, hospitals) | GeoJSON | ~47 MB |
@@ -134,7 +134,7 @@ This repository consolidates data from the following open-data projects and gove
 | [datameet/INDIA_PINCODES](https://github.com/datameet/INDIA_PINCODES) | DataMeet | — | Postal code boundaries |
 | [datameet/Municipal_Spatial_Data](https://github.com/datameet/Municipal_Spatial_Data) | DataMeet | CC BY 4.0 | Municipal ward boundaries for 28 cities |
 | [NOAA VIIRS DNB](https://eogdata.mines.edu/products/vnl/) | NOAA / EOG | Public domain | Nighttime light satellite imagery |
-| [india-district-nightlights-viirs](https://github.com/yashveeeeeeer/india-district-nightlights-viirs) | yashveeeeeeer | MIT | District-level nightlight statistics pipeline |
+| [india-district-nightlights-viirs](https://github.com/yashveeeeeeer/india-district-nightlights-viirs) | ShibaX1 | MIT | District-level nightlight statistics pipeline |
 | [SHRUG](https://www.devdatalab.org/shrug) | Development Data Lab | CC BY-NC-SA 4.0 | Socioeconomic data for 500K+ villages (external link) |
 | [indian_transport](https://github.com/ramSeraph/indian_transport) | ramSeraph | CC0 1.0 / ODbL / GODL | Roads (SOI, NIC, PMGSY, MoRTH, Urban, ML), Railways, Inland Waterways |
 | [INDIAN-SHAPEFILES](https://github.com/datta07/INDIAN-SHAPEFILES) | datta07 | — | Energy plants, Police stations, Railways, National highways (GeoJSON) |
@@ -147,7 +147,7 @@ This repository consolidates data from the following open-data projects and gove
 | [India Flood Atlas](https://github.com/wcl-iitgn/india-flood-atlas-data) | Water and Climate Lab, IIT Gandhinagar | CC BY 4.0 | District/state/subbasin flood statistics (1901–2020) |
 | [indian_buildings](https://github.com/ramSeraph/indian_buildings) | ramSeraph | CC0 1.0 | Urban building footprints (AMRUT, GSDL, VEDAS) |
 
-Government data sources include: Survey of India, Local Government Directory (MoPR), ISRO Bhuvan, Forest Survey of India, National Centre for Sustainable Coastal Management, GatiShakti, eGramSwaraj, Swachh Bharat Mission, the Election Commission of India, NOAA Earth Observation Group, Ministry of Road Transport and Highways (MoRTH), Indian Railways, Water Resources Information System (WRIS), National Informatics Centre (NIC), SLUSI, Jal Dharohar, and AMRUT.
+Government data sources include: Survey of India, Local Government Directory (MoPR), ISRO Bhuvan, Forest Survey of India, National Centre for Sustainable Coastal Management, GatiShakti, eGramSwaraj, SHRUG, and others.
 
 ---
 
@@ -180,11 +180,11 @@ Individual datasets carry their own licenses as documented in their
 ```bibtex
 @misc{india_geodata,
   title  = {India Geodata: Unified Geospatial Data Repository},
-  author = {Singh, Yashveer},
+  author = {ShibaX1},
   year   = {2026},
   publisher = {GitHub},
-  url    = {https://github.com/yashveeeeeeer/india-geodata},
-  note   = {Fork maintained by ShibaX1: https://github.com/shibasisn2-lgtm/shibax1}
+  url    = {https://github.com/shibasisn2-lgtm/shibax1},
+  note   = {Fork of https://github.com/yashveeeeeeer/india-geodata by Yashveer Singh}
 }
 ```
 
