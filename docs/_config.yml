@@ -1,19 +1,21 @@
-title: India Geodata
+title: ShibaX1 India Geodata
 description: "Download India's open geospatial data — administrative boundaries, district maps, electoral constituencies, census geometries, forest cover, nighttime lights, rural roads, and more. Free GIS shapefiles, GeoJSON, Parquet, and PMTiles."
-baseurl: /shibax1
-url: https://shibasisn2-lgtm.github.io
+baseurl: "/shibax1"
+url: "https://shibasisn2-lgtm.github.io"
 
 author:
-  name: Yashveer Singh
-  twitter: yashv_r
-twitter:
-  username: yashv_r
+  name: ShibaX1
 social:
-  name: Yashveer Singh
+  name: ShibaX1
   links:
-    - https://x.com/yashv_r
-    - https://www.linkedin.com/in/yashveersinghh/
-    - https://github.com/yashveeeeeeer
+    - https://github.com/shibasisn2-lgtm
+
+# This site is a fork. The underlying data compilation was created by
+# Yashveer Singh and is reused here under CC BY 4.0.
+original:
+  name: Yashveer Singh
+  url: https://github.com/yashveeeeeeer
+  source: https://github.com/yashveeeeeeer/india-geodata
 
 plugins:
   - jekyll-seo-tag
