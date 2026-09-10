@@ -1,13 +1,20 @@
 cff-version: 1.2.0
-message: "If you use this dataset, please cite it as below."
+message: "If you use this dataset, please cite the original compilation as below. This repository is a CC BY 4.0 fork maintained by ShibaX1."
 type: dataset
 title: "India Geodata"
+authors:
+  - name: "Yashveer Singh"
+    alias: "yashveeeeeeer"
+contact:
+  - name: "ShibaX1"
+    alias: "shibasisn2-lgtm"
 abstract: >-
   Unified repository of India's openly-licensed geospatial data,
   covering administrative boundaries, electoral maps, census geometries,
   environmental zones, infrastructure networks, urban municipal data,
   postal boundaries, police jurisdictions, and satellite remote sensing.
 repository-code: "https://github.com/yashveeeeeeer/india-geodata"
+url: "https://shibasisn2-lgtm.github.io/shibax1/"
 license: CC-BY-4.0
 date-released: "2026-03-07"
 keywords:
