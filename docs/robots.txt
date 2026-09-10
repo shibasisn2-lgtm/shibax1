@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yashveeeeeeer.github.io/india-geodata/sitemap.xml
+Sitemap: https://shibasisn2-lgtm.github.io/shibax1/sitemap.xml
