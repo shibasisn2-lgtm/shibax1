@@ -1,19 +1,23 @@
-# India Geodata
+# ShibaX1 India Geodata
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Data validation](https://img.shields.io/badge/metadata-validated-brightgreen.svg)](.github/workflows/validate-metadata.yml)
 
 A unified, structured collection of India's openly-licensed geospatial data — administrative boundaries, electoral maps, census geometries, environmental zones, water resources, infrastructure networks, healthcare, education, urban municipal data, and more.
 
-Browse and download at **[india-geodata](https://yashveeeeeeer.github.io/india-geodata)**
+Browse and download at **[ShibaX1 India Geodata](https://shibasisn2-lgtm.github.io/shibax1)**
+
+> **About this repository** — This is a fork of [`yashveeeeeeer/india-geodata`](https://github.com/yashveeeeeeer/india-geodata),
+> the original data compilation by **Yashveer Singh**, reused under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+> Maintained here by **ShibaX1**. Dataset download links point at the upstream release assets, which is where the files are hosted.
 
 ---
 
 ## India Map Maker — free online map maker for India
 
-**[Open the map maker](https://yashveeeeeeer.github.io/india-geodata/maps/)** · paste a spreadsheet, get a coloured map. No sign-up, no watermark, nothing is uploaded.
+**[Open the map maker](https://shibasisn2-lgtm.github.io/shibax1/maps/)** · paste a spreadsheet, get a coloured map. No sign-up, no watermark, nothing is uploaded.
 
-[![India Map Maker: literacy rate by state, 2011](docs/assets/img/map-maker.png)](https://yashveeeeeeer.github.io/india-geodata/maps/)
+[![India Map Maker: literacy rate by state, 2011](docs/assets/img/map-maker.png)](https://shibasisn2-lgtm.github.io/shibax1/maps/)
 
 - Map all of India, one state or one district by **state, district, sub-district, block, parliamentary or assembly constituency**
 - Paste from Excel or Google Sheets, or drop a CSV / Excel file; misspelt names are flagged and fixable, or use the template CSV with official codes
@@ -54,21 +58,21 @@ Total: approximately 1,800+ files across 14 aggregated source collections and cu
 Clone or download individual directories as needed.
 
 **Large files** (administrative boundaries, forests, coastal zones, etc.)
-are distributed through [GitHub Releases](../../releases).
+are distributed through [GitHub Releases](https://github.com/yashveeeeeeer/india-geodata/releases) on the upstream repository.
 Each release tag corresponds to a data category.
 
 ```bash
 # Download all state boundary files
-gh release download admin/states --dir ./downloads/states
+gh release download admin/states --repo yashveeeeeeer/india-geodata --dir ./downloads/states
 
 # Download only parquet files for districts
-gh release download admin/districts --pattern "*.parquet" --dir ./downloads/districts
+gh release download admin/districts --repo yashveeeeeeer/india-geodata --pattern "*.parquet" --dir ./downloads/districts
 
 # Download everything for forests
-gh release download environment/forests --dir ./downloads/forests
+gh release download environment/forests --repo yashveeeeeeer/india-geodata --dir ./downloads/forests
 
 # List all available releases
-gh release list
+gh release list --repo yashveeeeeeer/india-geodata
 ```
 
 To download all release assets at once, use the helper script:
@@ -175,10 +179,12 @@ Individual datasets carry their own licenses as documented in their
 
 ```bibtex
 @misc{india_geodata,
-  title = {India Geodata: Unified Geospatial Data Repository},
-  year = {2026},
+  title  = {India Geodata: Unified Geospatial Data Repository},
+  author = {Singh, Yashveer},
+  year   = {2026},
   publisher = {GitHub},
-  url = {https://github.com/yashveeeeeeer/india-geodata}
+  url    = {https://github.com/yashveeeeeeer/india-geodata},
+  note   = {Fork maintained by ShibaX1: https://github.com/shibasisn2-lgtm/shibax1}
 }
 ```
 
