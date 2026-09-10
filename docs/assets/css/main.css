@@ -1,32 +1,36 @@
 /* ==========================================================================
-   India Geodata — Main Stylesheet
-   https://yashveeeeeeer.github.io/india-geodata/
+   ShibaX1 India Geodata — Main Stylesheet
+   https://shibasisn2-lgtm.github.io/shibax1/
    ========================================================================== */
 
 /* --- Variables --- */
 :root {
-  --color-primary:       #1e3a5f;
-  --color-primary-light: #2d5a8e;
-  --color-accent:        #f59e0b;
-  --color-accent-hover:  #d97706;
+  /* ShibaX1 identity — deep ink + teal */
+  --color-primary:       #101a33;
+  --color-primary-light: #24365f;
+  --color-accent:        #00b3a4;   /* fills, and accents on dark */
+  --color-accent-hover:  #009a8d;
+  --color-accent-deep:   #00736a;   /* text links on white (AA contrast) */
+  --color-accent-soft:   rgba(0,179,164,0.12);
   --color-bg:            #ffffff;
-  --color-bg-light:      #f8fafc;
-  --color-text:          #1a1a2e;
-  --color-muted:         #64748b;
-  --color-border:        #e2e8f0;
-  --color-code-bg:       #1e293b;
+  --color-bg-light:      #f4f7f9;
+  --color-text:          #131722;
+  --color-muted:         #5b6678;
+  --color-border:        #e3e8ef;
+  --color-code-bg:       #101a33;
 
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
                  Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 
-  --header-height: 56px;
-  --container-max: 960px;
-  --radius:    8px;
-  --radius-sm: 4px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
-  --transition: 0.2s ease;
+  --header-height: 60px;
+  --container-max: 1020px;
+  --radius:    10px;
+  --radius-sm: 6px;
+  --shadow-sm: 0 1px 2px rgba(16,26,51,0.06), 0 2px 8px rgba(16,26,51,0.05);
+  --shadow-md: 0 4px 16px rgba(16,26,51,0.10);
+  --shadow-lg: 0 10px 30px rgba(16,26,51,0.13);
+  --transition: 0.18s cubic-bezier(.4,0,.2,1);
 }
 
 /* --- Reset --- */
@@ -43,11 +47,13 @@ body {
   flex-direction: column;
 }
 img { max-width: 100%; height: auto; display: block; }
-a { color: var(--color-accent); text-decoration: none; transition: color var(--transition); }
+a { color: var(--color-accent-deep); text-decoration: none; transition: color var(--transition); }
 a:hover { color: var(--color-accent-hover); }
 ul, ol { list-style: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 code, pre { font-family: var(--font-mono); }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: var(--radius-sm); }
+::selection { background: rgba(0,179,164,0.22); }
 
 /* --- Header --- */
 .site-header {
@@ -59,7 +65,7 @@ code, pre { font-family: var(--font-mono); }
   height: var(--header-height);
   display: flex;
   align-items: center;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 2px 12px rgba(0,0,0,0.22);
 }
 .header-inner {
   width: 100%;
@@ -72,11 +78,29 @@ code, pre { font-family: var(--font-mono); }
 }
 .site-title {
   color: #fff;
-  font-weight: 700;
-  font-size: 1.1rem;
   text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1;
 }
-.site-title:hover { color: #fff; opacity: 0.9; }
+.site-mark {
+  font-weight: 700;
+  font-size: 1.12rem;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg, #fff 0%, var(--color-accent) 140%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.site-sub {
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  padding-left: 8px;
+  border-left: 1px solid rgba(255,255,255,0.18);
+}
+.site-title:hover .site-sub { color: rgba(255,255,255,0.8); }
 .site-nav { display: flex; align-items: center; gap: 24px; }
 .site-nav a {
   color: rgba(255,255,255,0.85);
@@ -94,17 +118,36 @@ main { flex: 1; }
 
 /* --- Hero --- */
 .hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(140deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
   color: #fff;
-  padding: 48px 24px 40px;
+  padding: 64px 24px 52px;
   text-align: center;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -40% 30% auto -10%;
+  height: 130%;
+  background: radial-gradient(closest-side, rgba(0,179,164,0.30), transparent 70%);
+  z-index: -1;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -15% -60% 45%;
+  height: 130%;
+  background: radial-gradient(closest-side, rgba(58,90,160,0.35), transparent 70%);
+  z-index: -1;
+}
 .hero-inner { max-width: var(--container-max); margin: 0 auto; }
-.hero h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+.hero h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
 .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.82); max-width: 720px; margin: 0 auto 28px; }
-.hero-stats { display: flex; justify-content: center; gap: 48px; }
+.hero-stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px 56px; }
 .stat-item { text-align: center; }
-.stat-number { display: block; font-size: 1.8rem; font-weight: 700; color: var(--color-accent); line-height: 1.2; }
+.stat-number { display: block; font-size: 2rem; font-weight: 700; color: var(--color-accent); line-height: 1.2; }
 .stat-label { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.65); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
 
 /* --- Catalog Section --- */
@@ -124,7 +167,7 @@ main { flex: 1; }
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 .search-box::placeholder { color: var(--color-muted); }
-.search-box:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(245,158,11,0.12); }
+.search-box:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
 
 /* --- Category Pills --- */
 .category-pills {
@@ -182,7 +225,7 @@ main { flex: 1; }
   padding: 14px 16px;
   transition: box-shadow var(--transition);
 }
-.dataset-card:hover { box-shadow: var(--shadow-sm); }
+.dataset-card:hover { box-shadow: var(--shadow-md); border-color: rgba(0,179,164,0.45); transform: translateY(-1px); }
 .dataset-header {
   display: flex;
   align-items: flex-start;
@@ -303,7 +346,7 @@ main { flex: 1; }
 .btn-file-dl {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-accent-deep);
   text-decoration: none;
 }
 .btn-file-dl:hover { text-decoration: underline; }
@@ -348,7 +391,7 @@ main { flex: 1; }
 
 /* --- Release Link --- */
 .release-link { margin-top: 10px; font-size: 0.84rem; }
-.release-link a { color: var(--color-accent); }
+.release-link a { color: var(--color-accent-deep); }
 .release-link a:hover { text-decoration: underline; }
 
 /* --- Release Download Box (for datasets without individual files) --- */
@@ -370,6 +413,7 @@ main { flex: 1; }
   margin-top: 0;
   font-size: 0.84rem;
 }
+.footer-credit { font-size: 0.8rem; opacity: 0.72; }
 .site-footer a { color: var(--color-accent); }
 .site-footer a:hover { color: #fff; }
 
@@ -388,14 +432,34 @@ main { flex: 1; }
 }
 .about-page h3 { font-size: 1rem; font-weight: 600; margin: 18px 0 6px; }
 #map-maker { scroll-margin-top: 76px; }
-.about-more > summary { display: inline-block; list-style: none; cursor: pointer; color: var(--color-accent); font-size: 0.95rem; text-decoration: underline; text-decoration-color: rgba(245,158,11,0.35); text-underline-offset: 2px; margin: 2px 0 12px; }
+.about-more > summary { display: inline-block; list-style: none; cursor: pointer; color: var(--color-accent-deep); font-size: 0.95rem; text-decoration: underline; text-decoration-color: rgba(0,179,164,0.4); text-underline-offset: 2px; margin: 2px 0 12px; }
 .about-more > summary::-webkit-details-marker { display: none; }
 .about-more > summary:hover { text-decoration-color: var(--color-accent); }
 .about-more > summary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 2px; }
 .about-more[open] > summary .more, .about-more:not([open]) > summary .less { display: none; }   /* land below the sticky header when linked from the map maker */
 .about-page p { margin-bottom: 12px; font-size: 0.95rem; line-height: 1.7; color: var(--color-text); }
-.about-page a { color: var(--color-accent); text-decoration: underline; text-decoration-color: rgba(245,158,11,0.35); text-underline-offset: 2px; }
+.about-page a { color: var(--color-accent-deep); text-decoration: underline; text-decoration-color: rgba(0,179,164,0.4); text-underline-offset: 2px; }
 .about-page a:hover { text-decoration-color: var(--color-accent); }
+
+.credit-note {
+  margin: 22px 0 4px;
+  padding: 14px 16px;
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.credit-note h2 {
+  font-size: 0.82rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted) !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin: 0 0 6px !important;
+}
+.credit-note p { margin-bottom: 0 !important; font-size: 0.88rem !important; }
+.about-page .lede { font-size: 1.08rem; line-height: 1.6; color: var(--color-text); font-weight: 500; }
 
 .social-links { display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
 .social-link {
@@ -411,7 +475,7 @@ main { flex: 1; }
   text-decoration: none;
   transition: all var(--transition);
 }
-.social-link:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.social-link:hover { border-color: var(--color-accent); color: var(--color-accent-deep); }
 .social-link svg { flex-shrink: 0; }
 
 .about-page pre {
