@@ -3,17 +3,13 @@ message: "If you use this dataset, please cite the original compilation as below
 type: dataset
 title: "India Geodata"
 authors:
-  - name: "Yashveer Singh"
-    alias: "yashveeeeeeer"
-contact:
-  - name: "ShibaX1"
+    name: "ShibaX1"
     alias: "shibasisn2-lgtm"
 abstract: >-
   Unified repository of India's openly-licensed geospatial data,
   covering administrative boundaries, electoral maps, census geometries,
   environmental zones, infrastructure networks, urban municipal data,
   postal boundaries, police jurisdictions, and satellite remote sensing.
-repository-code: "https://github.com/yashveeeeeeer/india-geodata"
 url: "https://shibasisn2-lgtm.github.io/shibax1/"
 license: CC-BY-4.0
 date-released: "2026-03-07"
@@ -49,8 +45,7 @@ references:
   - type: dataset
     title: "India District Nightlights VIIRS"
     authors:
-      - name: "yashveeeeeeer"
-    repository-code: "https://github.com/yashveeeeeeer/india-district-nightlights-viirs"
+      - name: "ShibaX1"
     license: MIT
   - type: dataset
     title: "SHRUG: Socioeconomic High-resolution Rural-Urban Geographic Platform for India"
