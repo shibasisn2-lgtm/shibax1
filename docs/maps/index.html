@@ -60,6 +60,49 @@ permalink: /maps/
             <span class="file-drop-hint">or drop a file here</span>
             <input type="file" id="fileInput" accept=".csv,.tsv,.txt,.xlsx,.xls,.xlsm,.ods,.json,text/csv,text/comma-separated-values,text/tab-separated-values,text/plain,application/json,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel.sheet.macroEnabled.12,application/vnd.oasis.opendocument.spreadsheet">
           </label>
+
+          <details class="sample-data">
+            <summary>What should my file look like?</summary>
+            <div class="sample-data-body">
+              <p class="sample-lead">Two columns: the region name, then a number. A header row is optional.</p>
+
+              <div class="sample-grid">
+                <figure class="sample-card">
+                  <figcaption>Mapping states<span>Area: India &middot; Divide into: States</span></figcaption>
+                  <table class="sample-table">
+                    <thead><tr><th>Name</th><th>Value</th></tr></thead>
+                    <tbody>
+                      <tr><td>Kerala</td><td>94.0</td></tr>
+                      <tr><td>Bihar</td><td>61.8</td></tr>
+                      <tr><td>Odisha</td><td>72.9</td></tr>
+                    </tbody>
+                  </table>
+                </figure>
+                <figure class="sample-card">
+                  <figcaption>Mapping districts<span>Area: Odisha &middot; Divide into: Districts</span></figcaption>
+                  <table class="sample-table">
+                    <thead><tr><th>District</th><th>Literacy</th><th>Population</th></tr></thead>
+                    <tbody>
+                      <tr><td>Khordha</td><td>86.9</td><td>2251673</td></tr>
+                      <tr><td>Cuttack</td><td>84.2</td><td>2624470</td></tr>
+                      <tr><td>Koraput</td><td>49.2</td><td>1379647</td></tr>
+                    </tbody>
+                  </table>
+                </figure>
+              </div>
+
+              <ul class="sample-rules">
+                <li><strong>First column</strong> &mdash; the region name, spelt roughly as on the map. Misspellings get flagged so you can fix them.</li>
+                <li><strong>Second column</strong> &mdash; the number to colour by. Blank cells count as no data.</li>
+                <li><strong>Extra columns are fine</strong> &mdash; choose which one to map with <em>Value column</em>.</li>
+                <li><strong>One row per region.</strong> Anything missing takes the &ldquo;no data&rdquo; colour.</li>
+              </ul>
+
+              <p class="sample-formats"><strong>Accepted:</strong> <code>.csv</code> <code>.tsv</code> <code>.txt</code> <code>.xlsx</code> <code>.xls</code> <code>.xlsm</code> <code>.ods</code> <code>.json</code> &mdash; or paste straight from Excel or Google Sheets into the box above.</p>
+              <p class="sample-hint">Unsure of the spellings? Hit <strong>Template CSV</strong> below to get every region name pre-filled &mdash; add your values and upload it back.</p>
+            </div>
+          </details>
+
           <div class="row" id="sourcePick" hidden>
             <div class="field" id="sheetField" hidden><label for="sheetPick">Sheet</label><select id="sheetPick"></select></div>
             <div class="field" id="colField" hidden><label for="colPick">Value column</label><select id="colPick"></select></div>
@@ -271,7 +314,7 @@ permalink: /maps/
             <button class="btn-plain secondary" data-export="project" type="button" title="Save everything on this page as a file you can open again with Upload">Save project</button>
           </div>
           <p class="hint" id="saveNote" hidden>Saved in this browser</p>
-          <p class="hint"><a id="reportLink" href="https://github.com/yashveeeeeeer/india-geodata/issues/new" target="_blank" rel="noopener">Report a problem</a></p>
+          <p class="hint"><a id="reportLink" href="https://github.com/shibasisn2-lgtm/shibax1/issues/new" target="_blank" rel="noopener">Report a problem</a></p>
         </div>
       </details>
 
@@ -325,8 +368,13 @@ permalink: /maps/
         "name": "Yashveer Singh",
         "url": "https://github.com/yashveeeeeeer"
       },
-      "license": "https://github.com/yashveeeeeeer/india-geodata/blob/main/LICENSE",
-      "sameAs": "https://github.com/yashveeeeeeer/india-geodata",
+      "maintainer": {
+        "@type": "Person",
+        "name": "ShibaX1",
+        "url": "https://github.com/shibasisn2-lgtm"
+      },
+      "license": "https://github.com/shibasisn2-lgtm/shibax1/blob/main/LICENSE",
+      "sameAs": "https://github.com/shibasisn2-lgtm/shibax1",
       "isPartOf": {
         "@type": "WebSite",
         "name": "India Geodata",
