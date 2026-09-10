@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% seo %}
   <meta name="keywords" content="India GIS data, India shapefile download, India district boundaries, India geospatial data, India administrative boundaries, census 2011 boundaries, India electoral map, India village boundaries, India tehsil map, VIIRS nightlights India, India open data, free India map data, GeoJSON India, Parquet India, PMTiles India, India block boundaries, India panchayat boundaries, India constituency map, India forest cover data, India pincode boundaries">
+  <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/img/favicon.svg">
+  <meta name="theme-color" content="#101a33">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css?v=11">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css?v=12">
   {% if page.url contains "/maps/" %}<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/maps.css?v={{ site.time | date: '%s' }}">
   <link rel="preload" as="fetch" crossorigin="anonymous" href="{{ site.baseurl }}/maps/data/districts.topo.json?v={{ site.time | date: '%s' }}">{% endif %}
@@ -16,12 +18,12 @@
 <body{% if page.url contains "/maps/" %} class="page-maps"{% endif %}>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="{{ site.baseurl }}/" class="site-title">India Geodata</a>
+      <a href="{{ site.baseurl }}/" class="site-title"><span class="site-mark">ShibaX1</span><span class="site-sub">India Geodata</span></a>
       <nav class="site-nav">
         <a href="{{ site.baseurl }}/">Home</a>
         <a href="{{ site.baseurl }}/maps/">Map Maker</a>
         <a href="{{ site.baseurl }}/about">About</a>
-        <a href="https://github.com/yashveeeeeeer/india-geodata" target="_blank" rel="noopener" class="nav-github">GitHub</a>
+        <a href="https://github.com/shibasisn2-lgtm/shibax1" target="_blank" rel="noopener" class="nav-github">GitHub</a>
       </nav>
     </div>
   </header>
@@ -30,7 +32,8 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>India Geodata is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+      <p>Maintained by <a href="https://github.com/shibasisn2-lgtm">ShibaX1</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+      <p class="footer-credit">Data compilation originally created by <a href="https://github.com/yashveeeeeeer" target="_blank" rel="noopener">Yashveer Singh</a> (<a href="https://github.com/yashveeeeeeer/india-geodata" target="_blank" rel="noopener">india-geodata</a>) and reused here under CC BY 4.0.</p>
       <p>Built with open data from India's government portals and community projects.</p>
     </div>
   </footer>
